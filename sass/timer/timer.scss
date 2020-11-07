@@ -1,0 +1,74 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+.t-container{
+    display: none;
+}
+.t-body{
+    position: relative;
+    padding: 15px;
+    width: 100%;
+    height: 45%;
+    input[type=number]{
+        width: 215px;
+        margin-left: 5px;
+        font-size: 1px;
+        direction: rtl;
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid $blue;
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+  margin: 0;
+}
+        
+    height: 80%;
+    border: none;
+    color:white;
+    padding:35px;
+    }
+    .holder{
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        background:none;
+        opacity: 0.5;
+        .t-seconds-1,.t-minutes-1,.t-hours-1,
+        .t-seconds-2,.t-minutes-2,.t-hours-2{
+            font-size:50px;
+        }
+    }
+    
+
+}
+.t-footer{
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    border-top: 1px solid $l-gray;
+    .t-controls{
+        display:flex;
+        .t-start,.t-reset{
+          @include center;
+          width:70px;
+          height:30px;  
+          border-radius: 2px;
+          
+        }
+        .t-start{
+            background-color: $blue;
+            color:$white; 
+        }
+        .t-reset{
+            border: 1px solid $l-gray;
+            color:$blue;
+            margin-left: 20px;
+        }
+    }
+    .t-resize{
+        @include center;
+        color:$l-gray;
+        font-size: 20px;
+    }
+}

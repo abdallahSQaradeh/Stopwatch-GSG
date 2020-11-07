@@ -1,0 +1,45 @@
+@import "mixin.scss";
+@import "variables.scss";
+@import "./timer/timer.scss";
+@import "./stopwatch/stopwatch.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  @include center;
+  height: 100vh;
+ 
+  .container{
+      width:60%;
+      height:30%;
+      border:1px solid $l-gray;
+      border-radius: 15px ;
+       
+      .header{
+          display:flex;
+          height:50px;
+          border-bottom: 1px solid $l-gray;
+
+          .timer{
+            color:$gray;
+          }
+          .timer,.stop-watch{
+              width:50%;
+              @include center;
+              &:hover{
+                cursor: pointer;
+              }
+            
+          }
+      }
+  }
+  .active{
+    color:$blue;
+    border-bottom: 2px solid $blue;
+}
+}
