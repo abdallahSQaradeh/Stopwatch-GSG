@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="timer" onclick="changetoTimer()">
+          <ion-icon name="hourglass-outline"></ion-icon>
+          <span> Timer</span>
+        </div>
+        <div class="stop-watch active" onclick="changetoStopwatch()">
+          <ion-icon name="stopwatch-outline"></ion-icon>
+          <span>Stop-watch</span>
+        </div>
+      </div>
+      <!--**************************Timer********************************-->
+      <div class="t-container">
+        <div class="t-body">
+          <input type="number" name="timer" id="number">
+          <label for="number">
+            <div class="holder">
+              <span class="t-hours-2">0</span>
+              <span class="t-hours-1">0</span><sub>h</sub>
+               <span class="t-minutes-2">0</span>
+               <span class="t-minutes-1">0</span>
+               <sub>m</sub>
+                <span class="t-seconds-2">0</span>
+                <span class="t-seconds-1">0</span>
+                <sub>s</sub>
+            </div>
+          </label>
+         
+          
+        </div>
+        <div class="t-footer">
+          <div class="t-controls">
+            <div class="t-start" onclick=" startCountDown()">Start</div>
+            <div class="t-reset" onclick="restCountDown()">Reset</div>
+          </div>
+          <div class="resize"><ion-icon name="expand-outline"></ion-icon></div>
+        </div>
+      </div>
+    <!--**************************Stopwatch********************************-->
+      <div class="s-container">
+        <div class="s-body">
+          <span class="s-minutes">0</span><sub class="s-m">m</sub>
+          <span class="s-seconds"></span><sub>S</sub>
+          <span class="s-m-seconds"></span>
+        </div>
+        <div class="s-footer">
+            <div class="s-controls">
+              <div class="s-start" onclick=" startTimer()">Start</div>
+              <div class="s-reset" onclick="resetTimer()">Reset</div>
+            </div>
+            <div class="resize"><ion-icon name="expand-outline"></ion-icon></div>
+          </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js//stop-watch.js"></script>
+    <script src="./js//timer.js"></script>
+  </body>
+</html>
