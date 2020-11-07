@@ -1,0 +1,170 @@
+.t-container {
+  display: none;
+}
+
+.t-body {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  height: 45%;
+}
+.t-body input[type=number] {
+  width: 215px;
+  margin-left: 5px;
+  font-size: 1px;
+  direction: rtl;
+  height: 80%;
+  border: none;
+  color: white;
+  padding: 35px;
+}
+.t-body input[type=number]:focus {
+  outline: none;
+  border-bottom: 2px solid #1A73E8;
+}
+.t-body input[type=number]::-webkit-outer-spin-button, .t-body input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.t-body .holder {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  background: none;
+  opacity: 0.5;
+}
+.t-body .holder .t-seconds-1, .t-body .holder .t-minutes-1, .t-body .holder .t-hours-1,
+.t-body .holder .t-seconds-2, .t-body .holder .t-minutes-2, .t-body .holder .t-hours-2 {
+  font-size: 50px;
+}
+
+.t-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid lightgrey;
+}
+.t-footer .t-controls {
+  display: flex;
+}
+.t-footer .t-controls .t-start, .t-footer .t-controls .t-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+}
+.t-footer .t-controls .t-start {
+  background-color: #1A73E8;
+  color: #FFF;
+}
+.t-footer .t-controls .t-reset {
+  border: 1px solid lightgrey;
+  color: #1A73E8;
+  margin-left: 20px;
+}
+.t-footer .t-resize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgrey;
+  font-size: 20px;
+}
+
+.s-body {
+  padding: 15px;
+  width: 100%;
+  height: 45%;
+}
+.s-body .s-seconds {
+  font-size: 50px;
+}
+.s-body .s-m-seconds {
+  font-size: 25px;
+}
+.s-body .s-minutes {
+  display: none;
+  font-size: 50px;
+}
+.s-body .s-m {
+  display: none;
+}
+
+.s-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid lightgrey;
+}
+.s-footer .s-controls {
+  display: flex;
+}
+.s-footer .s-controls .s-start, .s-footer .s-controls .s-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+}
+.s-footer .s-controls .s-start {
+  background-color: #1A73E8;
+  color: #FFF;
+}
+.s-footer .s-controls .s-reset {
+  border: 1px solid lightgrey;
+  color: #1A73E8;
+  margin-left: 20px;
+}
+.s-footer .s-resize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgrey;
+  font-size: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+body .container {
+  width: 60%;
+  height: 30%;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+body .container .header {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid lightgrey;
+}
+body .container .header .timer {
+  color: #808285;
+}
+body .container .header .timer, body .container .header .stop-watch {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .header .timer:hover, body .container .header .stop-watch:hover {
+  cursor: pointer;
+}
+body .active {
+  color: #1A73E8;
+  border-bottom: 2px solid #1A73E8;
+}
